@@ -33,7 +33,7 @@ class Server {
   }
 
   start() {
-    this.app.listen().then(({ url }) => {
+    this.app.listen({ port: this.port }).then(({ url }) => {
       console.log(`Server running ${url}`);
     });
   }
